@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cacty Bakes - Panqués Caseros</title>
+    <title>Cacty Bakes - Panqués Caseros Artesanales</title>
     <style>
         * {
             margin: 0;
@@ -12,128 +13,367 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Georgia', 'Times New Roman', serif;
             background-color: #fdf8f3;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
+        /* HEADER */
         header {
-            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
-            color: white;
-            text-align: center;
-            padding: 3rem 1rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #6B8E23 0%, #8FBC8F 100%);
+            padding: 2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            position: relative;
         }
 
-        header h1 {
-            font-size: 3rem;
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 200px 1fr 200px;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+        }
+
+        .header-title {
+            text-align: center;
+            color: white;
+        }
+
+        .header-title h1 {
+            font-size: 3.5rem;
             margin-bottom: 0.5rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            font-family: 'Georgia', serif;
         }
 
-        header p {
-            font-size: 1.2rem;
+        .header-title p {
+            font-size: 1.3rem;
             opacity: 0.95;
+            font-style: italic;
         }
 
+        .barbie-header {
+            display: flex;
+            justify-content: center;
+        }
+
+        .barbie-header img {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+        }
+
+        /* CONTAINER */
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 2rem 1rem;
+            padding: 3rem 2rem;
         }
 
-        .intro {
-            text-align: center;
-            margin-bottom: 3rem;
-            padding: 2rem;
+        /* WELCOME SECTION */
+        .welcome-section {
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .intro h2 {
-            color: #8B4513;
-            margin-bottom: 1rem;
-            font-size: 2rem;
-        }
-
-        .section {
+            border-radius: 20px;
+            padding: 3rem;
             margin-bottom: 4rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            display: grid;
+            grid-template-columns: 1fr 250px;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .welcome-text h2 {
+            color: #6B8E23;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .welcome-text p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .welcome-barbie img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+        }
+
+        /* MENU SECTION */
+        .menu-section {
+            margin-bottom: 5rem;
         }
 
         .section-title {
-            color: #8B4513;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 3px solid #D2691E;
             text-align: center;
+            color: #6B8E23;
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #B19CD9;
+            position: relative;
         }
 
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: #6B8E23;
         }
 
-        .product-card {
+        /* MENU ITEM - LAYOUT IZQUIERDA */
+        .menu-item-left {
             background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            display: grid;
+            grid-template-columns: 450px 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        /* MENU ITEM - LAYOUT DERECHA */
+        .menu-item-right {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            display: grid;
+            grid-template-columns: 1fr 450px;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        /* GALLERY */
+        .product-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 1;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
 
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        .gallery-item:hover {
+            transform: scale(1.05);
         }
 
-        .product-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-            font-size: 0.9rem;
-        }
-
-        .product-image img {
+        .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        .product-info {
-            padding: 1.5rem;
-        }
-
-        .product-name {
-            font-size: 1.3rem;
-            color: #8B4513;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-        }
-
-        .product-price {
-            font-size: 1.5rem;
-            color: #D2691E;
-            font-weight: bold;
-            margin-top: 0.5rem;
-        }
-
-        .price-note {
+        .gallery-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(107, 142, 35, 0.9);
+            color: white;
+            padding: 0.5rem;
+            text-align: center;
             font-size: 0.9rem;
-            color: #666;
-            font-style: italic;
-            margin-top: 0.3rem;
+            font-weight: 600;
         }
 
+        /* MENU LIST */
+        .menu-list {
+            padding: 1rem 0;
+        }
+
+        .menu-list h3 {
+            color: #6B8E23;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #B19CD9;
+            padding-bottom: 0.5rem;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0.8rem 0;
+            border-bottom: 1px dotted #ddd;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-name {
+            font-size: 1.3rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .item-price {
+            font-size: 1.4rem;
+            color: #B19CD9;
+            font-weight: 700;
+            white-space: nowrap;
+            margin-left: 1rem;
+        }
+
+        .special-note {
+            background: #fff3cd;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+            color: #856404;
+            font-weight: 600;
+            text-align: center;
+            font-size: 1.1rem;
+            border-left: 4px solid #ffc107;
+        }
+
+        .coming-soon {
+            color: #6c757d;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* BARBIE DIVIDER */
+        .barbie-divider {
+            text-align: center;
+            margin: 5rem 0;
+        }
+
+        .barbie-divider img {
+            width: 300px;
+            height: auto;
+            filter: drop-shadow(0 8px 16px rgba(0,0,0,0.15));
+        }
+
+        /* CHRISTMAS SECTION */
+        .christmas-section {
+            background: linear-gradient(135deg, #d4f1d4 0%, #f8e6f0 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .christmas-header {
+            display: grid;
+            grid-template-columns: 1fr 250px;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .christmas-title {
+            color: #c41e3a;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .christmas-subtitle {
+            color: #2d5016;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .christmas-text {
+            color: #333;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .christmas-barbie img {
+            width: 100%;
+            border-radius: 15px;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+        }
+
+        .baskets-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .basket-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .basket-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .basket-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .basket-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .basket-name {
+            font-size: 1.5rem;
+            color: #6B8E23;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .basket-price {
+            font-size: 2rem;
+            color: #c41e3a;
+            font-weight: 700;
+        }
+
+        .discount-badge {
+            background: #c41e3a;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 2rem;
+            display: inline-block;
+        }
+
+        /* WHATSAPP BUTTON */
         .whatsapp-button {
             position: fixed;
             bottom: 30px;
@@ -143,9 +383,9 @@
             padding: 18px 30px;
             border-radius: 50px;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: bold;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
             transition: all 0.3s ease;
             z-index: 1000;
             display: flex;
@@ -156,41 +396,107 @@
         .whatsapp-button:hover {
             background-color: #128C7E;
             transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.7);
         }
 
         .whatsapp-icon {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
 
+        /* FOOTER */
         footer {
-            background-color: #8B4513;
+            background: linear-gradient(135deg, #6B8E23 0%, #556B2F 100%);
             color: white;
             text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
+            padding: 3rem 2rem;
+            margin-top: 5rem;
         }
 
-        .coming-soon {
-            background: #fff3cd;
-            padding: 1rem;
-            border-radius: 10px;
-            text-align: center;
-            margin-top: 1rem;
-            color: #856404;
-            font-weight: 500;
+        footer p {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1200px) {
+            .header-content {
+                grid-template-columns: 150px 1fr 150px;
+            }
+
+            .logo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .barbie-header img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .menu-item-left,
+            .menu-item-right {
+                grid-template-columns: 1fr;
+            }
+
+            .product-gallery {
+                grid-template-columns: repeat(3, 1fr);
+                margin-bottom: 2rem;
+            }
+
+            .welcome-section {
+                grid-template-columns: 1fr;
+            }
+
+            .welcome-barbie {
+                text-align: center;
+            }
+
+            .welcome-barbie img {
+                max-width: 300px;
+            }
+
+            .christmas-header {
+                grid-template-columns: 1fr;
+            }
+
+            .christmas-barbie {
+                text-align: center;
+            }
+
+            .christmas-barbie img {
+                max-width: 300px;
+            }
         }
 
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
+            .header-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .header-title h1 {
+                font-size: 2.5rem;
             }
 
             .section-title {
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
 
-            .products-grid {
+            .product-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .item-price {
+                margin-left: 0;
+                margin-top: 0.5rem;
+            }
+
+            .baskets-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -200,561 +506,536 @@
                 padding: 15px 25px;
                 font-size: 1rem;
             }
+
+            .barbie-divider img {
+                width: 200px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- HEADER -->
     <header>
-        <h1>🧁 Cacty Bakes 🧁</h1>
-        <p>Panqués caseros hechos con amor</p>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="images/logo-cacty-bakes.png" alt="Cacty Bakes Logo" class="logo">
+            </div>
+            <div class="header-title">
+                <h1>Cacty Bakes</h1>
+                <p>Panqués Caseros Hechos con Amor</p>
+            </div>
+            <div class="barbie-header">
+                <img src="images/barbie-header.png" alt="Cacty Bakes">
+            </div>
+        </div>
     </header>
 
+    <!-- CONTAINER -->
     <div class="container">
-        <div class="intro">
-            <h2>¡Bienvenidos!</h2>
-            <p>Deliciosos panqués caseros en diferentes sabores y presentaciones. Hechos con ingredientes de calidad y mucho cariño. ¡Haz tu pedido por WhatsApp!</p>
-        </div>
+        
+        <!-- WELCOME SECTION -->
+        <section class="welcome-section">
+            <div class="welcome-text">
+                <h2>¡Bienvenidos a Cacty Bakes!</h2>
+                <p>Descubre nuestros deliciosos panqués artesanales, elaborados con ingredientes de calidad y mucho cariño. Cada pieza es horneada fresca y hecha a mano especialmente para ti.</p>
+                <p style="margin-top: 1rem;">Explora nuestro menú y encuentra tu sabor favorito. ¡Haz tu pedido por WhatsApp y disfruta del sabor casero!</p>
+            </div>
+            <div class="welcome-barbie">
+                <img src="images/barbie-pastel-zanahoria.png" alt="Cacty Bakes Especialidad">
+            </div>
+        </section>
 
         <!-- PANQUÉ TRADICIONAL -->
-        <section class="section">
+        <section class="menu-section">
             <h2 class="section-title">🍞 Panqué Tradicional</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image">
+            
+            <div class="menu-item-left">
+                <div class="product-gallery">
+                    <div class="gallery-item">
                         <img src="images/zanahoria-panque.jpg" alt="Panqué de Zanahoria">
+                        <div class="gallery-label">Zanahoria</div>
                     </div>
-                    <div class="product-info">
-                        <div class="product-name">Zanahoria</div>
-                        <div class="product-price">$145.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
+                    <div class="gallery-item">
                         <img src="images/platano-panque.jpg" alt="Panqué de Plátano">
+                        <div class="gallery-label">Plátano</div>
                     </div>
-                    <div class="product-info">
-                        <div class="product-name">Plátano</div>
-                        <div class="product-price">$161.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Chocolate</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Chocolate</div>
-                        <div class="product-price">$217.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Café</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Café</div>
-                        <div class="product-price">$173.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Plátano Avena y Miel</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Plátano Avena y Miel</div>
-                        <div class="product-price">$142.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Limón</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Limón</div>
-                        <div class="product-price">$166.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Cacahuate</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Cacahuate</div>
-                        <div class="product-price">$174.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Platáhuate</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Platáhuate</div>
-                        <div class="product-price">$214.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Chocoñuate</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Chocoñuate</div>
-                        <div class="product-price">$246.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
+                    <div class="gallery-item">
                         <img src="images/chocobanana-panque.jpg" alt="Panqué de Chocobanana">
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Chocobanana</div>
-                        <div class="product-price">$173.00</div>
+                        <div class="gallery-label">Chocobanana</div>
                     </div>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/elote-panque.jpg" alt="Panqué de Elote">
+                <div class="menu-list">
+                    <h3>Sabores Disponibles</h3>
+                    <div class="menu-item">
+                        <span class="item-name">Zanahoria</span>
+                        <span class="item-price">$145.00</span>
                     </div>
-                    <div class="product-info">
-                        <div class="product-name">Elote</div>
-                        <div class="product-price">$263.00</div>
+                    <div class="menu-item">
+                        <span class="item-name">Plátano</span>
+                        <span class="item-price">$161.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Chocolate</span>
+                        <span class="item-price">$217.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Café</span>
+                        <span class="item-price">$173.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Plátano Avena y Miel</span>
+                        <span class="item-price">$142.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Limón</span>
+                        <span class="item-price">$166.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Cacahuate</span>
+                        <span class="item-price">$174.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Platáhuate</span>
+                        <span class="item-price">$214.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Chocoñuate</span>
+                        <span class="item-price">$246.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Chocobanana</span>
+                        <span class="item-price">$173.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Elote</span>
+                        <span class="item-price">$263.00</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- PANQUÉ REDONDO -->
-        <section class="section">
+        <section class="menu-section">
             <h2 class="section-title">⭕ Panqué Redondo</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Zanahoria</div>
+            
+            <div class="menu-item-right">
+                <div class="menu-list">
+                    <h3>Sabores Disponibles</h3>
+                    <div class="menu-item">
+                        <span class="item-name">Zanahoria</span>
+                        <span class="item-price">$221.00</span>
                     </div>
-                    <div class="product-info">
-                        <div class="product-name">Zanahoria</div>
-                        <div class="product-price">$221.00</div>
+                    <div class="menu-item">
+                        <span class="item-name">Plátano</span>
+                        <span class="item-price">$246.00</span>
                     </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Plátano</div>
+                    <div class="menu-item">
+                        <span class="item-name">Chocolate</span>
+                        <span class="item-price">$251.00</span>
                     </div>
-                    <div class="product-info">
-                        <div class="product-name">Plátano</div>
-                        <div class="product-price">$246.00</div>
+                    <div class="menu-item">
+                        <span class="item-name">Café</span>
+                        <span class="item-price">$208.00</span>
                     </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Chocolate</div>
+                    <div class="menu-item">
+                        <span class="item-name">Plátano Avena y Miel</span>
+                        <span class="item-price">$181.00</span>
                     </div>
-                    <div class="product-info">
-                        <div class="product-name">Chocolate</div>
-                        <div class="product-price">$251.00</div>
+                    <div class="menu-item">
+                        <span class="item-name">Limón</span>
+                        <span class="item-price">$200.00</span>
                     </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Café</div>
+                    <div class="menu-item">
+                        <span class="item-name">Cacahuate</span>
+                        <span class="item-price">$207.00</span>
                     </div>
-                    <div class="product-info">
-                        <div class="product-name">Café</div>
-                        <div class="product-price">$208.00</div>
+                    <div class="menu-item">
+                        <span class="item-name">Platáhuate</span>
+                        <span class="item-price">$247.00</span>
                     </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Plátano Avena y Miel</div>
+                    <div class="menu-item">
+                        <span class="item-name">Chocoñuate</span>
+                        <span class="item-price">$279.00</span>
                     </div>
-                    <div class="product-info">
-                        <div class="product-name">Plátano Avena y Miel</div>
-                        <div class="product-price">$181.00</div>
+                    <div class="menu-item">
+                        <span class="item-name">Chocobanana</span>
+                        <span class="item-price">$206.00</span>
                     </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Limón</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Limón</div>
-                        <div class="product-price">$200.00</div>
+                    <div class="menu-item">
+                        <span class="item-name">Elote</span>
+                        <span class="item-price">$296.00</span>
                     </div>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Cacahuate</div>
+                <div class="product-gallery">
+                    <div class="gallery-item">
+                        <img src="images/zanahoria-redondo.jpg" alt="Panqué Redondo de Zanahoria">
+                        <div class="gallery-label">Zanahoria</div>
                     </div>
-                    <div class="product-info">
-                        <div class="product-name">Cacahuate</div>
-                        <div class="product-price">$207.00</div>
+                    <div class="gallery-item">
+                        <img src="images/chocolate-redondo.jpg" alt="Panqué Redondo de Chocolate">
+                        <div class="gallery-label">Chocolate</div>
                     </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Platáhuate</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Platáhuate</div>
-                        <div class="product-price">$247.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Chocoñuate</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Chocoñuate</div>
-                        <div class="product-price">$279.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Chocobanana</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Chocobanana</div>
-                        <div class="product-price">$206.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Elote</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Elote</div>
-                        <div class="product-price">$296.00</div>
+                    <div class="gallery-item" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); display: flex; align-items: center; justify-content: center; color: #999;">
+                        Más sabores disponibles
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- MINI PANQUÉ -->
-        <section class="section">
+        <section class="menu-section">
             <h2 class="section-title">🧈 Mini Panqué</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Zanahoria</div>
+            
+            <div class="menu-item-left">
+                <div class="product-gallery">
+                    <div class="gallery-item">
+                        <img src="images/platano-mini.jpg" alt="Mini Panqué de Plátano">
+                        <div class="gallery-label">Plátano</div>
                     </div>
-                    <div class="product-info">
-                        <div class="product-name">Zanahoria</div>
-                        <div class="product-price">$94.00</div>
+                    <div class="gallery-item" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); display: flex; align-items: center; justify-content: center; color: #999;">
+                        Más sabores disponibles
                     </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Plátano</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Plátano</div>
-                        <div class="product-price">$105.00</div>
+                    <div class="gallery-item" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); display: flex; align-items: center; justify-content: center; color: #999;">
+                        Más sabores disponibles
                     </div>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Chocolate</div>
+                <div class="menu-list">
+                    <h3>Sabores Disponibles</h3>
+                    <div class="menu-item">
+                        <span class="item-name">Zanahoria</span>
+                        <span class="item-price">$94.00</span>
                     </div>
-                    <div class="product-info">
-                        <div class="product-name">Chocolate</div>
-                        <div class="product-price">$136.00</div>
+                    <div class="menu-item">
+                        <span class="item-name">Plátano</span>
+                        <span class="item-price">$105.00</span>
                     </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Café</div>
+                    <div class="menu-item">
+                        <span class="item-name">Chocolate</span>
+                        <span class="item-price">$136.00</span>
                     </div>
-                    <div class="product-info">
-                        <div class="product-name">Café</div>
-                        <div class="product-price">$109.00</div>
+                    <div class="menu-item">
+                        <span class="item-name">Café</span>
+                        <span class="item-price">$109.00</span>
                     </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Plátano Avena y Miel</div>
+                    <div class="menu-item">
+                        <span class="item-name">Plátano Avena y Miel</span>
+                        <span class="item-price">$93.00</span>
                     </div>
-                    <div class="product-info">
-                        <div class="product-name">Plátano Avena y Miel</div>
-                        <div class="product-price">$93.00</div>
+                    <div class="menu-item">
+                        <span class="item-name">Limón</span>
+                        <span class="item-price">$105.00</span>
                     </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Limón</div>
+                    <div class="menu-item">
+                        <span class="item-name">Cacahuate</span>
+                        <span class="item-price">$109.00</span>
                     </div>
-                    <div class="product-info">
-                        <div class="product-name">Limón</div>
-                        <div class="product-price">$105.00</div>
+                    <div class="menu-item">
+                        <span class="item-name">Platáhuate</span>
+                        <span class="item-price">$129.00</span>
                     </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Cacahuate</div>
+                    <div class="menu-item">
+                        <span class="item-name">Chocoñuate</span>
+                        <span class="item-price">$145.00</span>
                     </div>
-                    <div class="product-info">
-                        <div class="product-name">Cacahuate</div>
-                        <div class="product-price">$109.00</div>
+                    <div class="menu-item">
+                        <span class="item-name">Chocobanana</span>
+                        <span class="item-price">$109.00</span>
                     </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Platáhuate</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Platáhuate</div>
-                        <div class="product-price">$129.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Chocoñuate</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Chocoñuate</div>
-                        <div class="product-price">$145.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Chocobanana</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Chocobanana</div>
-                        <div class="product-price">$109.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Elote</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Elote</div>
-                        <div class="product-price">$153.00</div>
+                    <div class="menu-item">
+                        <span class="item-name">Elote</span>
+                        <span class="item-price">$153.00</span>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- BARBIE DIVIDER -->
+        <div class="barbie-divider">
+            <img src="images/barbie-horneando.png" alt="Cacty Bakes Horneando">
+        </div>
+
         <!-- PASTEL -->
-        <section class="section">
+        <section class="menu-section">
             <h2 class="section-title">🎂 Pastel (Doble con Betún)</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image">
+            
+            <div class="menu-item-right">
+                <div class="menu-list">
+                    <h3>Sabores Disponibles</h3>
+                    <div class="menu-item">
+                        <span class="item-name">Zanahoria</span>
+                        <span class="item-price">$406.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Plátano</span>
+                        <span class="item-price">$451.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Chocolate</span>
+                        <span class="item-price">$466.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Café</span>
+                        <span class="item-price">$379.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Plátano Avena y Miel</span>
+                        <span class="item-price">$312.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Limón</span>
+                        <span class="item-price">$363.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Cacahuate</span>
+                        <span class="item-price">$377.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Platáhuate</span>
+                        <span class="item-price">$458.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Chocoñuate</span>
+                        <span class="item-price">$521.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Chocobanana</span>
+                        <span class="item-price">$376.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Elote</span>
+                        <span class="item-price">$555.00</span>
+                    </div>
+                </div>
+
+                <div class="product-gallery">
+                    <div class="gallery-item">
                         <img src="images/zanahoria-pastel.jpg" alt="Pastel de Zanahoria">
+                        <div class="gallery-label">Zanahoria</div>
                     </div>
-                    <div class="product-info">
-                        <div class="product-name">Zanahoria</div>
-                        <div class="product-price">$406.00</div>
+                    <div class="gallery-item">
+                        <img src="images/chocolate-pastel.jpg" alt="Pastel de Chocolate">
+                        <div class="gallery-label">Chocolate</div>
                     </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Plátano</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Plátano</div>
-                        <div class="product-price">$451.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Chocolate</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Chocolate</div>
-                        <div class="product-price">$466.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Café</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Café</div>
-                        <div class="product-price">$379.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Plátano Avena y Miel</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Plátano Avena y Miel</div>
-                        <div class="product-price">$312.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Limón</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Limón</div>
-                        <div class="product-price">$363.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Cacahuate</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Cacahuate</div>
-                        <div class="product-price">$377.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Platáhuate</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Platáhuate</div>
-                        <div class="product-price">$458.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Chocoñuate</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Chocoñuate</div>
-                        <div class="product-price">$521.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Chocobanana</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Chocobanana</div>
-                        <div class="product-price">$376.00</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div>Elote</div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Elote</div>
-                        <div class="product-price">$555.00</div>
+                    <div class="gallery-item">
+                        <img src="images/limon-fresa-pastel.jpg" alt="Pastel de Limón con Fresa">
+                        <div class="gallery-label">Limón con Fresa</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- MUFFINS -->
-        <section class="section">
+        <section class="menu-section">
             <h2 class="section-title">🧁 Muffins</h2>
-            <div class="coming-soon">
-                📋 Precios próximamente disponibles
-            </div>
-            <div class="products-grid" style="margin-top: 2rem;">
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/cacahuate-muffin.jpg" alt="Muffin de Cacahuate">
+            
+            <div class="menu-item-left">
+                <div class="product-gallery">
+                    <div class="gallery-item">
+                        <img src="images/platahuate-muffin.jpg" alt="Muffin Platáhuate">
+                        <div class="gallery-label">Platáhuate</div>
                     </div>
-                    <div class="product-info">
-                        <div class="product-name">Cacahuate</div>
-                        <div class="price-note">Precio próximamente</div>
+                    <div class="gallery-item">
+                        <img src="images/chocolate-muffin.jpg" alt="Muffin de Chocolate">
+                        <div class="gallery-label">Chocolate</div>
                     </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/cafe-muffin.jpg" alt="Muffin de Café">
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Café</div>
-                        <div class="price-note">Precio próximamente</div>
+                    <div class="gallery-item">
+                        <img src="images/zanahoria-muffin.jpg" alt="Muffin de Zanahoria">
+                        <div class="gallery-label">Zanahoria</div>
                     </div>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/cacahuate-platano-muffin.jpg" alt="Muffin de Cacahuate con Plátano">
+                <div class="menu-list">
+                    <h3>Sabores Disponibles</h3>
+                    <div class="special-note">
+                        📋 Pedido mínimo: 12 piezas
                     </div>
-                    <div class="product-info">
-                        <div class="product-name">Cacahuate con Plátano</div>
-                        <div class="price-note">Precio próximamente</div>
+                    <div class="menu-item">
+                        <span class="item-name">Cacahuate</span>
+                        <span class="item-price coming-soon">Próximamente</span>
                     </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/cacahuate-chocolate-muffin.jpg" alt="Muffin de Cacahuate con Chocolate">
+                    <div class="menu-item">
+                        <span class="item-name">Café</span>
+                        <span class="item-price coming-soon">Próximamente</span>
                     </div>
-                    <div class="product-info">
-                        <div class="product-name">Cacahuate con Chocolate</div>
-                        <div class="price-note">Precio próximamente</div>
+                    <div class="menu-item">
+                        <span class="item-name">Cacahuate con Plátano</span>
+                        <span class="item-price coming-soon">Próximamente</span>
                     </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/canela-muffin.jpg" alt="Muffin de Canela">
+                    <div class="menu-item">
+                        <span class="item-name">Cacahuate con Chocolate</span>
+                        <span class="item-price coming-soon">Próximamente</span>
                     </div>
-                    <div class="product-info">
-                        <div class="product-name">Canela</div>
-                        <div class="price-note">Precio próximamente</div>
+                    <div class="menu-item">
+                        <span class="item-name">Canela</span>
+                        <span class="item-price coming-soon">Próximamente</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Chocolate</span>
+                        <span class="item-price coming-soon">Próximamente</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Zanahoria</span>
+                        <span class="item-price coming-soon">Próximamente</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- MINI MUFFINS -->
-        <section class="section">
+        <section class="menu-section">
             <h2 class="section-title">🍪 Mini Muffins</h2>
-            <div class="coming-soon">
-                📋 Precios próximamente disponibles
+            
+            <div class="menu-item-right">
+                <div class="menu-list">
+                    <h3>Sabores Disponibles</h3>
+                    <div class="special-note">
+                        📋 Pedido mínimo: 24 piezas de cada sabor
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Café</span>
+                        <span class="item-price coming-soon">Próximamente</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Canela</span>
+                        <span class="item-price coming-soon">Próximamente</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Chocolate</span>
+                        <span class="item-price coming-soon">Próximamente</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Zanahoria</span>
+                        <span class="item-price coming-soon">Próximamente</span>
+                    </div>
+                </div>
+
+                <div class="product-gallery">
+                    <div class="gallery-item">
+                        <img src="images/cafe-minimuffin.jpg" alt="Mini Muffin de Café">
+                        <div class="gallery-label">Café</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/canela-minimuffin.jpg" alt="Mini Muffin de Canela">
+                        <div class="gallery-label">Canela</div>
+                    </div>
+                    <div class="gallery-item" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); display: flex; align-items: center; justify-content: center; color: #999;">
+                        Más sabores disponibles
+                    </div>
+                </div>
             </div>
         </section>
+
+        <!-- ESPECIALIDADES -->
+        <section class="menu-section">
+            <h2 class="section-title">⭐ Especialidades</h2>
+            
+            <div class="menu-item-left">
+                <div class="product-gallery">
+                    <div class="gallery-item">
+                        <img src="images/licor43-muffin.jpg" alt="Muffin de Licor 43">
+                        <div class="gallery-label">Licor 43</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/baileys-muffin.jpg" alt="Muffin de Baileys">
+                        <div class="gallery-label">Baileys</div>
+                    </div>
+                    <div class="gallery-item" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); display: flex; align-items: center; justify-content: center; color: #999;">
+                        Más especialidades próximamente
+                    </div>
+                </div>
+
+                <div class="menu-list">
+                    <h3>Muffins Premium</h3>
+                    <p style="color: #666; font-size: 1.1rem; margin-bottom: 1.5rem; font-style: italic;">
+                        Nuestros muffins especiales elaborados con licores premium para paladares exigentes.
+                    </p>
+                    <div class="menu-item">
+                        <span class="item-name">Muffin de Licor 43</span>
+                        <span class="item-price coming-soon">Cotiza por WhatsApp</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Muffin de Baileys</span>
+                        <span class="item-price coming-soon">Cotiza por WhatsApp</span>
+                    </div>
+                    <div class="special-note">
+                        📋 Pedido mínimo: 12 piezas
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEMPORADA NAVIDEÑA -->
+        <section class="christmas-section">
+            <div class="christmas-header">
+                <div>
+                    <h2 class="christmas-title">🎄 Preventa Navideña 🎁</h2>
+                    <p class="christmas-subtitle">¡Regala momentos dulces esta Navidad!</p>
+                    <div class="christmas-text">
+                        <p><strong>Las imágenes son referenciales</strong>, pero tu canasta será 100% personalizada a tu gusto.</p>
+                        <p style="margin-top: 1rem;"><strong>Aparta con $150</strong> y te mando el catálogo para elegir:</p>
+                        <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                            <li>✨ Diseño de taza</li>
+                            <li>🎁 Detalle extra (peluche, calcetines, mini piñata o adorno)</li>
+                            <li>🍞 Sabor del pan</li>
+                        </ul>
+                        <p style="margin-top: 1rem;">Todo hecho a mano, recién horneado y con el toque apapachador de Cacty Bakes.</p>
+                        <p style="margin-top: 0.5rem;">📅 Entregas por fecha programada.</p>
+                    </div>
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <span class="discount-badge">🎉 10% de descuento apartando antes del 20 de noviembre</span>
+                    </div>
+                </div>
+                <div class="christmas-barbie">
+                    <img src="images/barbie-canasta-navidena.png" alt="Cacty Bakes Navidad">
+                </div>
+            </div>
+
+            <div class="baskets-grid">
+                <div class="basket-card">
+                    <img src="images/canasta-basica.jpg" alt="Canasta Básica" class="basket-image">
+                    <div class="basket-info">
+                        <div class="basket-name">Canasta Básica</div>
+                        <div class="basket-price">$385</div>
+                        <p style="color: #666; margin-top: 0.5rem; font-size: 0.95rem;">Ideal para regalos personalizados</p>
+                    </div>
+                </div>
+                <div class="basket-card">
+                    <img src="images/canasta-media.jpg" alt="Canasta Media" class="basket-image">
+                    <div class="basket-info">
+                        <div class="basket-name">Canasta Media</div>
+                        <div class="basket-price">$485</div>
+                        <p style="color: #666; margin-top: 0.5rem; font-size: 0.95rem;">La más pedida ⭐</p>
+                    </div>
+                </div>
+                <div class="basket-card">
+                    <img src="images/canasta-premium.jpg" alt="Canasta Premium" class="basket-image">
+                    <div class="basket-info">
+                        <div class="basket-name">Canasta Premium</div>
+                        <div class="basket-price">$585</div>
+                        <p style="color: #666; margin-top: 0.5rem; font-size: 0.95rem;">Favorita para regalos especiales 💝</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
 
-    <a href="https://wa.me/5215527232678?text=¡Hola!%20Me%20interesan%20tus%20panqués%20😊" class="whatsapp-button" target="_blank">
+    <!-- WHATSAPP BUTTON -->
+    <a href="https://wa.me/5215527232678?text=¡Hola!%20Me%20interesan%20tus%20productos%20de%20Cacty%20Bakes%20😊" class="whatsapp-button" target="_blank">
         <span class="whatsapp-icon">📱</span>
         Hacer Pedido
     </a>
 
+    <!-- FOOTER -->
     <footer>
         <p>&copy; 2024 Cacty Bakes - Todos los derechos reservados</p>
-        <p style="margin-top: 0.5rem;">📞 WhatsApp: 55 2723 2678</p>
+        <p style="margin-top: 1rem;">📞 WhatsApp: 55 2723 2678</p>
+        <p style="margin-top: 0.5rem;">📍 Tlalnepantla, México</p>
+        <p style="margin-top: 1rem; font-style: italic;">Hecho con amor y mucho cariño 💚💜</p>
     </footer>
+
 </body>
 </html>
