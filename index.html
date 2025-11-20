@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -74,6 +75,44 @@
             height: 180px;
             object-fit: contain;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+        }
+
+        /* MENÚ DE NAVEGACIÓN */
+        .nav-menu {
+            background: white;
+            border-bottom: 2px solid #B19CD9;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-button {
+            background: linear-gradient(135deg, #6B8E23 0%, #8FBC8F 100%);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(107, 142, 35, 0.3);
+        }
+
+        .nav-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(107, 142, 35, 0.5);
+            background: linear-gradient(135deg, #556B2F 0%, #6B8E23 100%);
         }
 
         /* CONTAINER */
@@ -264,6 +303,52 @@
             font-size: 1.1rem;
         }
 
+        /* BANNER INTEGRADO EN ESPECIALIDADES */
+        .integrated-banner {
+            background: linear-gradient(135deg, #B19CD9 0%, #D8BFD8 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-top: 3rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(177, 156, 217, 0.3);
+        }
+
+        .integrated-banner-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .integrated-banner h3 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .integrated-banner p {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .integrated-banner a {
+            display: inline-block;
+            background: white;
+            color: #8B4513;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .integrated-banner a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
         /* BARBIE DIVIDER */
         .barbie-divider {
             text-align: center;
@@ -318,12 +403,12 @@
             filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
         }
 
-      .baskets-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
+        .baskets-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
 
         .basket-card {
             background: white;
@@ -372,78 +457,70 @@
             margin-top: 2rem;
             display: inline-block;
         }
-        /* SPECIAL FLAVORS BANNER */
-        .special-flavors-banner {
-            background: linear-gradient(135deg, #B19CD9 0%, #D8BFD8 100%);
-            border-radius: 25px;
-            padding: 4rem 3rem;
-            margin-bottom: 4rem;
-            box-shadow: 0 8px 30px rgba(177, 156, 217, 0.3);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+
+        /* EVENTOS Y NOTICIAS */
+        .events-section {
+            background: #fdf8f3;
+            padding: 4rem 0;
         }
 
-        .special-flavors-banner::before {
-            content: '🎂';
-            position: absolute;
-            font-size: 15rem;
-            opacity: 0.1;
-            top: -50px;
-            right: -50px;
-            transform: rotate(-15deg);
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
-        .banner-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .banner-icon {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .banner-title {
-            color: white;
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .banner-text {
-            color: white;
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.8;
-        }
-
-        .banner-button {
-            display: inline-block;
+        .event-card {
             background: white;
-            color: #8B4513;
-            padding: 1.2rem 3rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.3rem;
-            font-weight: bold;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
         }
 
-        .banner-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-            background: #f8f8f8;
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .event-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+
+        .event-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .event-content {
+            padding: 2rem;
+        }
+
+        .event-title {
+            color: #6B8E23;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-date {
+            color: #B19CD9;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .event-description {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
 
         /* WHATSAPP BUTTON */
@@ -544,6 +621,10 @@
             .christmas-barbie img {
                 max-width: 300px;
             }
+
+            .baskets-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 768px) {
@@ -580,10 +661,10 @@
                 margin-top: 0.5rem;
             }
 
-  .baskets-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+            .baskets-grid {
+                grid-template-columns: 1fr;
+            }
+
             .whatsapp-button {
                 bottom: 20px;
                 right: 20px;
@@ -593,6 +674,16 @@
 
             .barbie-divider img {
                 width: 200px;
+            }
+
+            .nav-container {
+                gap: 0.5rem;
+                padding: 0.8rem 1rem;
+            }
+            
+            .nav-button {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.95rem;
             }
         }
     </style>
@@ -614,6 +705,16 @@
         </div>
     </header>
 
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="nav-menu">
+        <div class="nav-container">
+            <a href="#panes" class="nav-button">🍞 Panes</a>
+            <a href="#mini-panes" class="nav-button">🧈 Mini Panes</a>
+            <a href="#muffins" class="nav-button">🧁 Muffins</a>
+            <a href="#navidad" class="nav-button">🎄 Navidad</a>
+        </div>
+    </nav>
+
     <!-- CONTAINER -->
     <div class="container">
         
@@ -623,7 +724,7 @@
                 <h2>¡Bienvenidos a Cacty Bakes!</h2>
                 <p>Descubre nuestros deliciosos panqués artesanales, elaborados con ingredientes de calidad y mucho cariño. Cada pieza es horneada fresca y hecha a mano especialmente para ti.</p>
                 <p style="margin-top: 1rem;">Explora nuestro menú y encuentra tu sabor favorito. ¡Haz tu pedido por WhatsApp y disfruta del sabor casero!</p>
-           <p style="margin-top: 1rem; font-size: 0.95rem; color: #888; font-style: italic;">* Algunas imágenes son representativas. El producto final puede variar.</p>
+                <p style="margin-top: 1rem; font-size: 0.95rem; color: #888; font-style: italic;">* Algunas imágenes son representativas. El producto final puede variar.</p>
             </div>
             <div class="welcome-barbie">
                 <img src="images/barbie-pastel-zanahoria.png" alt="Cacty Bakes Especialidad">
@@ -631,7 +732,7 @@
         </section>
 
         <!-- PANQUÉ TRADICIONAL -->
-        <section class="menu-section">
+        <section class="menu-section" id="panes">
             <h2 class="section-title">🍞 Panqué Tradicional</h2>
             
             <div class="menu-item-left">
@@ -762,13 +863,15 @@
                         <img src="images/chocolate-redondo.png" alt="Panqué Redondo de Chocolate">
                         <div class="gallery-label">Chocolate</div>
                     </div>
-                    
+                    <div class="gallery-item" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); display: flex; align-items: center; justify-content: center; color: #999;">
+                        Más sabores disponibles
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- MINI PANQUÉ -->
-        <section class="menu-section">
+        <section class="menu-section" id="mini-panes">
             <h2 class="section-title">🧈 Mini Panqué</h2>
             
             <div class="menu-item-left">
@@ -777,8 +880,12 @@
                         <img src="images/platano-mini.png" alt="Mini Panqué de Plátano">
                         <div class="gallery-label">Plátano</div>
                     </div>
-                    
-                    
+                    <div class="gallery-item" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); display: flex; align-items: center; justify-content: center; color: #999;">
+                        Más sabores disponibles
+                    </div>
+                    <div class="gallery-item" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); display: flex; align-items: center; justify-content: center; color: #999;">
+                        Más sabores disponibles
+                    </div>
                 </div>
 
                 <div class="menu-list">
@@ -907,24 +1014,25 @@
         </section>
 
         <!-- MUFFINS -->
-        <section class="menu-section">
+        <section class="menu-section" id="muffins">
             <h2 class="section-title">🧁 Muffins</h2>
             
             <div class="menu-item-left">
                 <div class="product-gallery">
-    <div class="gallery-item">
-        <img src="images/platahuate-muffin.png" alt="Muffin Platáhuate">
-        <div class="gallery-label">Platáhuate</div>
-    </div>
-    <div class="gallery-item">
-        <img src="images/cafe-muffin.png" alt="Muffin de Café">
-        <div class="gallery-label">Café</div>
-    </div>
-    <div class="gallery-item">
-        <img src="images/elote-muffin.png" alt="Muffin de Elote">
-        <div class="gallery-label">Elote</div>
-    </div>
-</div>
+                    <div class="gallery-item">
+                        <img src="images/platahuate-muffin.png" alt="Muffin Platáhuate">
+                        <div class="gallery-label">Platáhuate</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/cafe-muffin.png" alt="Muffin de Café">
+                        <div class="gallery-label">Café</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/elote-muffin.png" alt="Muffin de Elote">
+                        <div class="gallery-label">Elote</div>
+                    </div>
+                </div>
+
                 <div class="menu-list">
                     <h3>Sabores Disponibles</h3>
                     <div class="special-note">
@@ -951,11 +1059,7 @@
                         <span class="item-price coming-soon">Próximamente</span>
                     </div>
                     <div class="menu-item">
-                        <span class="item-name">Chocolate</span>
-                        <span class="item-price coming-soon">Próximamente</span>
-                    </div>
-                    <div class="menu-item">
-                        <span class="item-name">Zanahoria</span>
+                        <span class="item-name">Elote</span>
                         <span class="item-price coming-soon">Próximamente</span>
                     </div>
                 </div>
@@ -999,63 +1103,64 @@
                         <img src="images/canela-minimuffin.png" alt="Mini Muffin de Canela">
                         <div class="gallery-label">Canela</div>
                     </div>
-                    
+                    <div class="gallery-item" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); display: flex; align-items: center; justify-content: center; color: #999;">
+                        Más sabores disponibles
                     </div>
                 </div>
             </div>
         </section>
 
-<!-- ESPECIALIDADES -->
-<section class="menu-section">
-    <h2 class="section-title">⭐ Especialidades</h2>
-    
-    <div class="menu-item-left">
-        <div class="product-gallery">
-            <div class="gallery-item">
-                <img src="images/licor43-muffin.png" alt="Muffin de Licor 43">
-                <div class="gallery-label">Licor 43</div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/baileys-muffin.png" alt="Muffin de Baileys">
-                <div class="gallery-label">Baileys</div>
-            </div>
-            <div class="gallery-item" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); display: flex; align-items: center; justify-content: center; color: #999;">
-                Más especialidades próximamente
-            </div>
-        </div>
+        <!-- ESPECIALIDADES -->
+        <section class="menu-section">
+            <h2 class="section-title">⭐ Especialidades</h2>
+            
+            <div class="menu-item-left">
+                <div class="product-gallery">
+                    <div class="gallery-item">
+                        <img src="images/licor43-muffin.png" alt="Muffin de Licor 43">
+                        <div class="gallery-label">Licor 43</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/baileys-muffin.png" alt="Muffin de Baileys">
+                        <div class="gallery-label">Baileys</div>
+                    </div>
+                    <div class="gallery-item" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); display: flex; align-items: center; justify-content: center; color: #999;">
+                        Más especialidades próximamente
+                    </div>
+                </div>
 
-        <div class="menu-list">
-            <h3>Muffins Premium</h3>
-            <p style="color: #666; font-size: 1.1rem; margin-bottom: 1.5rem; font-style: italic;">
-                Nuestros muffins especiales elaborados con licores premium para paladares exigentes.
-            </p>
-            <div class="menu-item">
-                <span class="item-name">Muffin de Licor 43</span>
-                <span class="item-price coming-soon">Cotiza por WhatsApp</span>
+                <div class="menu-list">
+                    <h3>Muffins Premium</h3>
+                    <p style="color: #666; font-size: 1.1rem; margin-bottom: 1.5rem; font-style: italic;">
+                        Nuestros muffins especiales elaborados con licores premium para paladares exigentes.
+                    </p>
+                    <div class="menu-item">
+                        <span class="item-name">Muffin de Licor 43</span>
+                        <span class="item-price coming-soon">Cotiza por WhatsApp</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Muffin de Baileys</span>
+                        <span class="item-price coming-soon">Cotiza por WhatsApp</span>
+                    </div>
+                    <div class="special-note">
+                        📋 Pedido mínimo: 12 piezas
+                    </div>
+                </div>
             </div>
-            <div class="menu-item">
-                <span class="item-name">Muffin de Baileys</span>
-                <span class="item-price coming-soon">Cotiza por WhatsApp</span>
-            </div>
-            <div class="special-note">
-                📋 Pedido mínimo: 12 piezas
-            </div>
-        </div>
-    </div>
-</section>
-<!-- SABORES ESPECIALES -->
-        <section class="special-flavors-banner">
-            <div class="banner-content">
-                <div class="banner-icon">✨</div>
-                <h2 class="banner-title">¿Buscas un Sabor Especial?</h2>
-                <p class="banner-text">¡Pregunta por sabores personalizados y combinaciones únicas! Adaptamos nuestros panqués a tus gustos y necesidades.</p>
-                <a href="https://wa.me/5215527232678?text=¡Hola!%20Me%20interesa%20preguntar%20por%20sabores%20especiales%20😊" class="banner-button" target="_blank">
+
+            <!-- BANNER INTEGRADO DE SABORES ESPECIALES -->
+            <div class="integrated-banner">
+                <div class="integrated-banner-icon">✨</div>
+                <h3>¿Buscas un Sabor Especial?</h3>
+                <p>¡Pregunta por sabores personalizados y combinaciones únicas! Adaptamos nuestros panqués a tus gustos y necesidades.</p>
+                <a href="https://wa.me/5215527232678?text=¡Hola!%20Me%20interesa%20preguntar%20por%20sabores%20especiales%20😊" target="_blank">
                     📱 Preguntar por WhatsApp
                 </a>
             </div>
         </section>
+
         <!-- TEMPORADA NAVIDEÑA -->
-        <section class="christmas-section">
+        <section class="christmas-section" id="navidad">
             <div class="christmas-header">
                 <div>
                     <h2 class="christmas-title">🎄 Preventa Navideña 🎁</h2>
@@ -1072,7 +1177,7 @@
                         <p style="margin-top: 0.5rem;">📅 Entregas por fecha programada.</p>
                     </div>
                     <div style="text-align: center; margin-top: 2rem;">
-                        <span class="discount-badge">🎉Entrega garantizada solo para pedidos confirmados antes del 15 de diciembre</span>
+                        <span class="discount-badge">🎉 Entrega garantizada solo para pedidos confirmados antes del 15 de diciembre</span>
                     </div>
                 </div>
                 <div class="christmas-barbie">
@@ -1090,7 +1195,7 @@
                     </div>
                 </div>
                 <div class="basket-card">
-                    <img src="images/canasta-media1.png" alt="Canasta Media" class="basket-image">
+                    <img src="images/canasta-media1.png?v=2" alt="Canasta Media" class="basket-image">
                     <div class="basket-info">
                         <div class="basket-name">Canasta Media</div>
                         <div class="basket-price">$485</div>
@@ -1098,7 +1203,7 @@
                     </div>
                 </div>
                 <div class="basket-card">
-                    <img src="images/canasta-media2.png" alt="Canasta Media" class="basket-image">
+                    <img src="images/canasta-media2.png?v=2" alt="Canasta Media" class="basket-image">
                     <div class="basket-info">
                         <div class="basket-name">Canasta Media</div>
                         <div class="basket-price">$485</div>
@@ -1117,6 +1222,28 @@
         </section>
 
     </div>
+
+    <!-- EVENTOS Y NOTICIAS -->
+    <section class="events-section">
+        <div class="container">
+            <h2 class="section-title">📰 Eventos Pasados</h2>
+            
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-image">
+                        <span>Foto próximamente</span>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">🎃 Temporada de Pan de Muerto</h3>
+                        <p class="event-date">Octubre - Noviembre 2024</p>
+                        <p class="event-description">
+                            Celebramos el Día de Muertos con nuestros deliciosos muffins y mini muffins sabor pan de muerto. ¡Una tradición dulce que conquistó a todos!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- WHATSAPP BUTTON -->
     <a href="https://wa.me/5215527232678?text=¡Hola!%20Me%20interesan%20tus%20productos%20de%20Cacty%20Bakes%20😊" class="whatsapp-button" target="_blank">
