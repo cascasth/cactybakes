@@ -372,6 +372,79 @@
             margin-top: 2rem;
             display: inline-block;
         }
+        /* SPECIAL FLAVORS BANNER */
+        .special-flavors-banner {
+            background: linear-gradient(135deg, #B19CD9 0%, #D8BFD8 100%);
+            border-radius: 25px;
+            padding: 4rem 3rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 8px 30px rgba(177, 156, 217, 0.3);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .special-flavors-banner::before {
+            content: '🎂';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.1;
+            top: -50px;
+            right: -50px;
+            transform: rotate(-15deg);
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .banner-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .banner-title {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .banner-text {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .banner-button {
+            display: inline-block;
+            background: white;
+            color: #8B4513;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .banner-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: #f8f8f8;
+        }
 
         /* WHATSAPP BUTTON */
         .whatsapp-button {
@@ -970,7 +1043,17 @@
                 </div>
             </div>
         </section>
-
+<!-- SABORES ESPECIALES -->
+        <section class="special-flavors-banner">
+            <div class="banner-content">
+                <div class="banner-icon">✨</div>
+                <h2 class="banner-title">¿Buscas un Sabor Especial?</h2>
+                <p class="banner-text">¡Pregunta por sabores personalizados y combinaciones únicas! Adaptamos nuestros panqués a tus gustos y necesidades.</p>
+                <a href="https://wa.me/5215527232678?text=¡Hola!%20Me%20interesa%20preguntar%20por%20sabores%20especiales%20😊" class="banner-button" target="_blank">
+                    📱 Preguntar por WhatsApp
+                </a>
+            </div>
+        </section>
         <!-- TEMPORADA NAVIDEÑA -->
         <section class="christmas-section">
             <div class="christmas-header">
