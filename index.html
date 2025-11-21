@@ -276,6 +276,13 @@
             font-weight: 500;
         }
 
+        .item-description {
+            font-size: 0.9rem;
+            color: #888;
+            font-style: italic;
+            margin-top: 0.2rem;
+        }
+
         .item-price {
             font-size: 1.4rem;
             color: #B19CD9;
@@ -302,50 +309,88 @@
             font-size: 1.1rem;
         }
 
-        /* BANNER INTEGRADO EN ESPECIALIDADES */
-        .integrated-banner {
+        /* BANNER ESPECIAL (antes del footer) */
+        .special-banner-section {
+            background: #fdf8f3;
+            padding: 4rem 0;
+        }
+
+        .special-banner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .banner-box {
             background: linear-gradient(135deg, #B19CD9 0%, #D8BFD8 100%);
-            border-radius: 20px;
-            padding: 3rem;
-            margin-top: 3rem;
+            border-radius: 25px;
+            padding: 4rem 3rem;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(177, 156, 217, 0.3);
+            box-shadow: 0 8px 30px rgba(177, 156, 217, 0.3);
+            position: relative;
+            overflow: hidden;
         }
 
-        .integrated-banner-icon {
-            font-size: 3rem;
+        .banner-box::before {
+            content: '🎂';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.1;
+            top: -50px;
+            right: -50px;
+            transform: rotate(-15deg);
+        }
+
+        .banner-content-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .banner-icon-large {
+            font-size: 4rem;
             margin-bottom: 1rem;
+            animation: bounce 2s infinite;
         }
 
-        .integrated-banner h3 {
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .banner-title-large {
             color: white;
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
-        .integrated-banner p {
+        .banner-text-large {
             color: white;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
         }
 
-        .integrated-banner a {
+        .banner-button-large {
             display: inline-block;
             background: white;
             color: #8B4513;
-            padding: 1rem 2.5rem;
+            padding: 1.2rem 3rem;
             border-radius: 50px;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         }
 
-        .integrated-banner a:hover {
+        .banner-button-large:hover {
             transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: #f8f8f8;
         }
 
         /* BARBIE DIVIDER */
@@ -482,23 +527,6 @@
             transform: translateY(-5px);
         }
 
-        .event-image {
-            width: 100%;
-            height: 250px;
-            overflow: hidden;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-        }
-
-        .event-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
         .event-content {
             padding: 2rem;
         }
@@ -558,7 +586,7 @@
             color: white;
             text-align: center;
             padding: 3rem 2rem;
-            margin-top: 5rem;
+            margin-top: 0;
         }
 
         footer p {
@@ -713,7 +741,8 @@
             <a href="#pasteles" class="nav-button">🎂 Pasteles</a>
             <a href="#muffins" class="nav-button">🧁 Muffins</a>
             <a href="#mini-muffins" class="nav-button">🍪 Mini Muffins</a>
-            <a href="#especialidades" class="nav-button">⭐ Especialidades</a>
+            <a href="#wellness" class="nav-button">💚 Wellness</a>
+            <a href="#premium" class="nav-button">⭐ Premium</a>
             <a href="#navidad" class="nav-button">🎄 Navidad</a>
         </div>
     </nav>
@@ -773,10 +802,6 @@
                         <span class="item-price">$173.00</span>
                     </div>
                     <div class="menu-item">
-                        <span class="item-name">Plátano Avena y Miel</span>
-                        <span class="item-price">$142.00</span>
-                    </div>
-                    <div class="menu-item">
                         <span class="item-name">Limón</span>
                         <span class="item-price">$166.00</span>
                     </div>
@@ -785,11 +810,17 @@
                         <span class="item-price">$174.00</span>
                     </div>
                     <div class="menu-item">
-                        <span class="item-name">Platáhuate</span>
+                        <div>
+                            <div class="item-name">Platáhuate</div>
+                            <div class="item-description">(plátano con cacahuate)</div>
+                        </div>
                         <span class="item-price">$214.00</span>
                     </div>
                     <div class="menu-item">
-                        <span class="item-name">Chocoñuate</span>
+                        <div>
+                            <div class="item-name">Chocoñuate</div>
+                            <div class="item-description">(chocolate con cacahuate)</div>
+                        </div>
                         <span class="item-price">$246.00</span>
                     </div>
                     <div class="menu-item">
@@ -828,10 +859,6 @@
                         <span class="item-price">$208.00</span>
                     </div>
                     <div class="menu-item">
-                        <span class="item-name">Plátano Avena y Miel</span>
-                        <span class="item-price">$181.00</span>
-                    </div>
-                    <div class="menu-item">
                         <span class="item-name">Limón</span>
                         <span class="item-price">$200.00</span>
                     </div>
@@ -840,11 +867,17 @@
                         <span class="item-price">$207.00</span>
                     </div>
                     <div class="menu-item">
-                        <span class="item-name">Platáhuate</span>
+                        <div>
+                            <div class="item-name">Platáhuate</div>
+                            <div class="item-description">(plátano con cacahuate)</div>
+                        </div>
                         <span class="item-price">$247.00</span>
                     </div>
                     <div class="menu-item">
-                        <span class="item-name">Chocoñuate</span>
+                        <div>
+                            <div class="item-name">Chocoñuate</div>
+                            <div class="item-description">(chocolate con cacahuate)</div>
+                        </div>
                         <span class="item-price">$279.00</span>
                     </div>
                     <div class="menu-item">
@@ -866,9 +899,6 @@
                         <img src="images/chocolate-redondo.png" alt="Panqué Redondo de Chocolate">
                         <div class="gallery-label">Chocolate</div>
                     </div>
-                    <div class="gallery-item" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); display: flex; align-items: center; justify-content: center; color: #999;">
-                        Más sabores disponibles
-                    </div>
                 </div>
             </div>
         </section>
@@ -882,12 +912,6 @@
                     <div class="gallery-item">
                         <img src="images/platano-mini.png" alt="Mini Panqué de Plátano">
                         <div class="gallery-label">Plátano</div>
-                    </div>
-                    <div class="gallery-item" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); display: flex; align-items: center; justify-content: center; color: #999;">
-                        Más sabores disponibles
-                    </div>
-                    <div class="gallery-item" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); display: flex; align-items: center; justify-content: center; color: #999;">
-                        Más sabores disponibles
                     </div>
                 </div>
 
@@ -910,10 +934,6 @@
                         <span class="item-price">$109.00</span>
                     </div>
                     <div class="menu-item">
-                        <span class="item-name">Plátano Avena y Miel</span>
-                        <span class="item-price">$93.00</span>
-                    </div>
-                    <div class="menu-item">
                         <span class="item-name">Limón</span>
                         <span class="item-price">$105.00</span>
                     </div>
@@ -922,11 +942,17 @@
                         <span class="item-price">$109.00</span>
                     </div>
                     <div class="menu-item">
-                        <span class="item-name">Platáhuate</span>
+                        <div>
+                            <div class="item-name">Platáhuate</div>
+                            <div class="item-description">(plátano con cacahuate)</div>
+                        </div>
                         <span class="item-price">$129.00</span>
                     </div>
                     <div class="menu-item">
-                        <span class="item-name">Chocoñuate</span>
+                        <div>
+                            <div class="item-name">Chocoñuate</div>
+                            <div class="item-description">(chocolate con cacahuate)</div>
+                        </div>
                         <span class="item-price">$145.00</span>
                     </div>
                     <div class="menu-item">
@@ -941,7 +967,11 @@
             </div>
         </section>
 
-       
+        <!-- BARBIE DIVIDER -->
+        <div class="barbie-divider">
+            <img src="images/barbie-horneando.png" alt="Cacty Bakes Horneando">
+        </div>
+
         <!-- PASTEL -->
         <section class="menu-section" id="pasteles">
             <h2 class="section-title">🎂 Pastel (Doble con Betún)</h2>
@@ -966,10 +996,6 @@
                         <span class="item-price">$379.00</span>
                     </div>
                     <div class="menu-item">
-                        <span class="item-name">Plátano Avena y Miel</span>
-                        <span class="item-price">$312.00</span>
-                    </div>
-                    <div class="menu-item">
                         <span class="item-name">Limón</span>
                         <span class="item-price">$363.00</span>
                     </div>
@@ -978,11 +1004,17 @@
                         <span class="item-price">$377.00</span>
                     </div>
                     <div class="menu-item">
-                        <span class="item-name">Platáhuate</span>
+                        <div>
+                            <div class="item-name">Platáhuate</div>
+                            <div class="item-description">(plátano con cacahuate)</div>
+                        </div>
                         <span class="item-price">$458.00</span>
                     </div>
                     <div class="menu-item">
-                        <span class="item-name">Chocoñuate</span>
+                        <div>
+                            <div class="item-name">Chocoñuate</div>
+                            <div class="item-description">(chocolate con cacahuate)</div>
+                        </div>
                         <span class="item-price">$521.00</span>
                     </div>
                     <div class="menu-item">
@@ -1102,32 +1134,54 @@
                         <img src="images/canela-minimuffin.png" alt="Mini Muffin de Canela">
                         <div class="gallery-label">Canela</div>
                     </div>
-                    <div class="gallery-item" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); display: flex; align-items: center; justify-content: center; color: #999;">
-                        Más sabores disponibles
+                </div>
+            </div>
+        </section>
+
+        <!-- WELLNESS -->
+        <section class="menu-section" id="wellness">
+            <h2 class="section-title">💚 Wellness</h2>
+            
+            <div class="menu-item-left">
+                <div class="product-gallery">
+                    <div class="gallery-item">
+                        <img src="images/avena-platano-miel-panque.png" alt="Pan de Avena con Plátano y Miel">
+                        <div class="gallery-label">Avena Plátano Miel</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/platano-integral-stevia-panque.png" alt="Plátano Integral con Stevia">
+                        <div class="gallery-label">Plátano Integral Stevia</div>
+                    </div>
+                </div>
+
+                <div class="menu-list">
+                    <h3>Opciones Naturales</h3>
+                    <p style="color: #666; font-size: 1.1rem; margin-bottom: 1.5rem; font-style: italic;">
+                        Panqués elaborados con ingredientes naturales para cuidar tu bienestar sin sacrificar el sabor.
+                    </p>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Pan de Avena con Plátano y Miel</div>
+                            <div class="item-description">(sin azúcar refinada, sin trigo)</div>
+                        </div>
+                        <span class="item-price">$142.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Plátano Integral con Stevia</div>
+                            <div class="item-description">(no contiene azúcar refinada)</div>
+                        </div>
+                        <span class="item-price coming-soon">Próximamente</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ESPECIALIDADES -->
-        <section class="menu-section" id="especialidades">
-            <h2 class="section-title">⭐ Especialidades</h2>
+        <!-- PREMIUM -->
+        <section class="menu-section" id="premium">
+            <h2 class="section-title">⭐ Premium</h2>
             
-            <div class="menu-item-left">
-                <div class="product-gallery">
-                    <div class="gallery-item">
-                        <img src="images/licor43-muffin.png" alt="Muffin de Licor 43">
-                        <div class="gallery-label">Licor 43</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/baileys-muffin.png" alt="Muffin de Baileys">
-                        <div class="gallery-label">Baileys</div>
-                    </div>
-                    <div class="gallery-item" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); display: flex; align-items: center; justify-content: center; color: #999;">
-                        Más especialidades próximamente
-                    </div>
-                </div>
-
+            <div class="menu-item-right">
                 <div class="menu-list">
                     <h3>Muffins Premium</h3>
                     <p style="color: #666; font-size: 1.1rem; margin-bottom: 1.5rem; font-style: italic;">
@@ -1145,9 +1199,19 @@
                         📋 Pedido mínimo: 12 piezas
                     </div>
                 </div>
+
+                <div class="product-gallery">
+                    <div class="gallery-item">
+                        <img src="images/licor43-muffin.png" alt="Muffin de Licor 43">
+                        <div class="gallery-label">Licor 43</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/baileys-muffin.png" alt="Muffin de Baileys">
+                        <div class="gallery-label">Baileys</div>
+                    </div>
+                </div>
             </div>
-
-
+        </section>
 
         <!-- TEMPORADA NAVIDEÑA -->
         <section class="christmas-section" id="navidad">
@@ -1255,29 +1319,28 @@
         </div>
     </section>
 
+    <!-- BANNER SABORES ESPECIALES (antes del footer) -->
+    <section class="special-banner-section">
+        <div class="special-banner">
+            <div class="banner-box">
+                <div class="banner-content-inner">
+                    <div class="banner-icon-large">✨</div>
+                    <h2 class="banner-title-large">¿Buscas un Sabor Especial?</h2>
+                    <p class="banner-text-large">¡Pregunta por sabores personalizados y combinaciones únicas! Adaptamos nuestros panqués a tus gustos y necesidades.</p>
+                    <a href="https://wa.me/5215527232678?text=¡Hola!%20Me%20interesa%20preguntar%20por%20sabores%20especiales%20😊" class="banner-button-large" target="_blank">
+                        📱 Preguntar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- WHATSAPP BUTTON -->
     <a href="https://wa.me/5215527232678?text=¡Hola!%20Me%20interesan%20tus%20productos%20de%20Cacty%20Bakes%20😊" class="whatsapp-button" target="_blank">
         <span class="whatsapp-icon">📱</span>
         Hacer Pedido
     </a>
-            </div>
-    
- <!-- BARBIE DIVIDER -->
-        <div class="barbie-divider">
-            <img src="images/barbie-horneando.png" alt="Cacty Bakes Horneando">
-        </div>
 
-            <!-- BANNER INTEGRADO DE SABORES ESPECIALES -->
-            <div class="integrated-banner">
-                <div class="integrated-banner-icon">✨</div>
-                <h3>¿Buscas un Sabor Especial?</h3>
-                <p>¡Pregunta por sabores personalizados y combinaciones únicas! Adaptamos nuestros panqués a tus gustos y necesidades.</p>
-                <a href="https://wa.me/5215527232678?text=¡Hola!%20Me%20interesa%20preguntar%20por%20sabores%20especiales%20😊" target="_blank">
-                    📱 Preguntar por WhatsApp
-                </a>
-            </div>
-        </section>
-    
     <!-- FOOTER -->
     <footer>
         <p>&copy; 2024 Cacty Bakes - Todos los derechos reservados</p>
