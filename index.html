@@ -712,6 +712,23 @@
                 padding: 0.6rem 1.2rem;
                 font-size: 0.95rem;
             }
+            .nav-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .banner-box > div {
+        grid-template-columns: 1fr !important;
+    }
+
+    .banner-box > div > div:first-child {
+        order: 2;
+    }
+
+    .banner-box > div > div:last-child {
+        order: 1;
+    }
+}
         }
     </style>
 </head>
@@ -1319,10 +1336,14 @@
         </div>
     </section>
 
-    <!-- BANNER SABORES ESPECIALES (antes del footer) -->
-    <section class="special-banner-section">
-        <div class="special-banner">
-            <div class="banner-box">
+<!-- BANNER SABORES ESPECIALES (antes del footer) -->
+<section class="special-banner-section">
+    <div class="special-banner">
+        <div class="banner-box">
+            <div style="display: grid; grid-template-columns: 300px 1fr; gap: 3rem; align-items: center; position: relative; z-index: 1;">
+                <div style="text-align: center;">
+                    <img src="images/barbie-horneando.png" alt="Cacty Bakes" style="width: 100%; max-width: 280px; height: auto; filter: drop-shadow(0 8px 16px rgba(0,0,0,0.3));">
+                </div>
                 <div class="banner-content-inner">
                     <div class="banner-icon-large">✨</div>
                     <h2 class="banner-title-large">¿Buscas un Sabor Especial?</h2>
@@ -1333,7 +1354,8 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- WHATSAPP BUTTON -->
     <a href="https://wa.me/5215527232678?text=¡Hola!%20Me%20interesan%20tus%20productos%20de%20Cacty%20Bakes%20😊" class="whatsapp-button" target="_blank">
