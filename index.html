@@ -77,14 +77,15 @@
         }
 
         /* MENÚ DE NAVEGACIÓN */
-        .nav-menu {
-            background: white;
-            border-bottom: 2px solid #B19CD9;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+.nav-menu {
+    background: white;
+    border-bottom: 2px solid #B19CD9;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
 
 .nav-container {
     max-width: 1400px;
@@ -982,6 +983,36 @@
         }
     </style>
 </head>
+    </footer>
+
+    <script>
+        // Hacer el menú más pequeño al hacer scroll
+        let lastScrollTop = 0;
+        const navMenu = document.querySelector('.nav-menu');
+        
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 100) {
+                navMenu.style.padding = '0.5rem 0';
+                navMenu.querySelectorAll('.nav-button').forEach(btn => {
+                    btn.style.padding = '0.5rem 1rem';
+                    btn.style.fontSize = '0.9rem';
+                });
+            } else {
+                navMenu.style.padding = '1rem 0';
+                navMenu.querySelectorAll('.nav-button').forEach(btn => {
+                    btn.style.padding = '0.8rem 2rem';
+                    btn.style.fontSize = '1.1rem';
+                });
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+    </script>
+
+</body>
+</html>
 <body>
 <div id="inicio"></div>    
     <!-- HEADER -->
