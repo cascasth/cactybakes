@@ -178,6 +178,55 @@
             height: 3px;
             background: #6B8E23;
         }
+        /* TESTIMONIALS SECTION */
+        .testimonials-section {
+            background: white;
+            border-radius: 20px;
+            padding: 4rem 3rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .testimonials-section h2 {
+            color: #6B8E23;
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: #fdf8f3;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-image {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-name {
+            color: #6B8E23;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
 
         /* MENU ITEM - LAYOUT IZQUIERDA */
         .menu-item-left {
@@ -936,7 +985,7 @@
             <div class="welcome-text">
                 <h2>¡Bienvenidos a Cacty Bakes!</h2>
                 <p>
-                    Panqués caseros artesanales hechos con <strong>ingredientes naturales, sin exceso de azúcar ni grasa.</strong> 
+                    Panqués caseros artesanales hechos con <strong>ingredientes naturales, sin exceso de azúcar, ni grasa.</strong> 
                     Cada pan es preparado con amor y dedicación, perfecto para consentirte a ti o sorprender a alguien especial.
                 </p>
                 <p style="margin-top: 1rem;">
@@ -1382,25 +1431,25 @@
         
       <!-- PASTEL -->
         <section class="menu-section" id="pasteles">
-            <h2 class="section-title">🎂 Pastel (Doble con Betún)</h2>
+            <h2 class="section-title">🎂 Pastel (Doble con Betún de queso crema o azúcar glass)</h2>
             <div class="menu-item-right">
                 <div class="menu-list">
                     <h3>Sabores Disponibles</h3>
                     <div class="menu-item">
-                        <span class="item-name">Zanahoria</span>
+                        <span class="item-name">Zanahoria con betún de queso crema enmedio y por fuera</span>
                         <span class="item-price">$398.00</span>
                     </div>
                     <div class="menu-item">
                         <span class="item-name">Chocolate</span>
-                        <span class="item-price">$550.00</span>
+                        <span class="item-price">$Cotiza por whatsapp</span>
                     </div>
                     <div class="menu-item">
                         <span class="item-name">Café</span>
-                        <span class="item-price">$550.00</span>
+                        <span class="item-price">$Cotiza por whatsapp</span>
                     </div>
                     <div class="menu-item">
                         <span class="item-name">Limón</span>
-                        <span class="item-price">$495.00</span>
+                        <span class="item-price">Cotiza por whatsapp</span>
                     </div>
                 </div>
                 <div class="product-gallery">
@@ -1483,6 +1532,68 @@
         </section>
 
     </div>
+        <!-- TESTIMONIOS -->
+        <section class="testimonials-section" id="testimonios">
+            <h2>💚 Lo Que Dicen Nuestros Clientes</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <img src="images/Testimonio_Raúl_zanahoria.png" alt="Testimonio Raúl" class="testimonial-image">
+                    <div class="testimonial-name">Raúl</div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="images/Testimonio_Marco_zanahoria.png" alt="Testimonio Marco" class="testimonial-image">
+                    <div class="testimonial-name">Marco</div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="images/Testimonio_Sam_vendiendoenbazar_zanahoria.png" alt="Testimonio Sam" class="testimonial-image">
+                    <div class="testimonial-name">Sam</div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="images/Testimonio_Teresa_zanahoria_con_manzana.png" alt="Testimonio Teresa" class="testimonial-image">
+                    <div class="testimonial-name">Teresa</div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="images/Testimonio_Teresa_zanahoria_con_manzana_2.png" alt="Testimonio Teresa" class="testimonial-image">
+                    <div class="testimonial-name">Teresa</div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="images/Testimonio_Rocio_zanahoria.png" alt="Testimonio Rocío" class="testimonial-image">
+                    <div class="testimonial-name">Rocío</div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="images/Testimonio_Jorge_zanahoria.png" alt="Testimonio Jorge" class="testimonial-image">
+                    <div class="testimonial-name">Jorge</div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="images/Testimonio_Rosy2_zanahoria.png" alt="Testimonio Rosy" class="testimonial-image">
+                    <div class="testimonial-name">Rosy</div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="images/Testimonio_Rosy1_plátano.png" alt="Testimonio Rosy" class="testimonial-image">
+                    <div class="testimonial-name">Rosy</div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="images/Terstimonio_Estela_chocolate.png" alt="Testimonio Estela" class="testimonial-image">
+                    <div class="testimonial-name">Estela</div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="images/Testimonio_Angeles1_zanahoria.png" alt="Testimonio Ángeles" class="testimonial-image">
+                    <div class="testimonial-name">Ángeles</div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="images/Testimonio_Angeles2a_zanahoria.png" alt="Testimonio Ángeles" class="testimonial-image">
+                    <div class="testimonial-name">Ángeles</div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="images/Testimonio_Angeles2b_zanahoria.png" alt="Testimonio Ángeles" class="testimonial-image">
+                    <div class="testimonial-name">Ángeles</div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="images/Testimonio_Laura_zanahoria.png" alt="Testimonio Laura" class="testimonial-image">
+                    <div class="testimonial-name">Laura</div>
+                </div>
+            </div>
+        </section>
 
     <!-- CÓMO HACER TU PEDIDO -->
     <section class="order-section" id="como-pedir">
