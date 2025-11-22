@@ -550,6 +550,118 @@
             line-height: 1.6;
         }
 
+                /* HOW TO ORDER SECTION */
+        .order-section {
+            background: linear-gradient(135deg, #B19CD9 0%, #D4C5E8 100%);
+            border-radius: 20px;
+            padding: 4rem 3rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .order-section h2 {
+            color: white;
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .order-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .order-step {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .order-step:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            background: #6B8E23;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0 auto 1.5rem;
+        }
+
+        .step-title {
+            color: #6B8E23;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .step-description {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .delivery-info {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 3rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .delivery-info h3 {
+            color: #6B8E23;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .delivery-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .delivery-item {
+            text-align: center;
+        }
+
+        .delivery-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .delivery-title {
+            color: #6B8E23;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .delivery-text {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+
+
         /* WHATSAPP BUTTON */
         .whatsapp-button {
             position: fixed;
@@ -593,6 +705,52 @@
             font-size: 1.1rem;
             margin: 0.5rem 0;
         }
+        
+        /* STORY SECTION */
+        .story-section {
+            background: white;
+            border-radius: 20px;
+            padding: 4rem 3rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .story-section h2 {
+            color: #6B8E23;
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .story-subtitle {
+            text-align: center;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #B19CD9;
+            margin-bottom: 3rem;
+        }
+
+        .story-content {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 2;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .story-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .story-highlight {
+            background: #fff9e6;
+            border-left: 4px solid #6B8E23;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            font-style: italic;
+        }
+
 
         /* RESPONSIVE */
         @media (max-width: 1200px) {
@@ -752,6 +910,7 @@
     <!-- MENÚ DE NAVEGACIÓN -->
     <nav class="nav-menu">
         <div class="nav-container">
+            <a href="#nosotros" class="nav-button">Nosotros</a>
             <a href="#panes" class="nav-button">🍞 Panes</a>
             <a href="#redondos" class="nav-button">⭕ Redondos</a>
             <a href="#mini-panes" class="nav-button">🧈 Mini</a>
@@ -760,7 +919,12 @@
             <a href="#mini-muffins" class="nav-button">🍪 Mini Muffins</a>
             <a href="#wellness" class="nav-button">💚 Wellness</a>
             <a href="#premium" class="nav-button">⭐ Premium</a>
-            <a href="#navidad" class="nav-button">🎄 Navidad</a>
+            <a href="#pasteles" class="nav-button">Pasteles</a>
+            <a href="#navidad" class="nav-button">🎄 Navidad</a>            
+            <a href="#como-pedir" class="nav-button">Cómo Pedir</a>
+            <a href="#testimonios" class="nav-button">Testimonios</a> 
+            <a href="#contacto" class="nav-button">Contacto</a>
+           
         </div>
     </nav>
 
@@ -783,6 +947,37 @@
                 <img src="images/barbie-pastel-zanahoria.png" alt="Cacty Bakes Especialidad">
             </div>
         </section>
+
+                <!-- NUESTRA HISTORIA -->
+        <section class="story-section" id="nosotros">
+            <h2>💚 Nuestra Historia</h2>
+            <p class="story-subtitle">"Horneado con cariño, compartido con intención."</p>
+            <div class="story-content">
+                <p>
+                    Cacty Bakes nació el 29 de agosto de 2025, el día que mi hija me pidió ayuda para un bazar de arte. 
+                    Entre risas y planes, pensé: "¿Y si también llevamos pan?" Lo que no sabía era que ese simple "¿y si…?" 
+                    traería de vuelta una tradición familiar que siempre me ha hecho feliz.
+                </p>
+                <p>
+                    Desde niña, la cocina era mi lugar favorito para convivir con mi abuela y mi tía abuela: horneábamos 
+                    galletas alemanas antes de Navidad, preparábamos pasteles de cumpleaños y llenábamos la casa de aromas 
+                    que anunciaban fiesta. Años después, con mi hija, seguimos haciendo lo mismo sin darnos cuenta: pan Stollen, 
+                    galletas Braune Kuchen… la tradición continúa.
+                </p>
+                <div class="story-highlight">
+                    <p>
+                        Siempre he disfrutado cocinar, sobre todo cuando es para sorprender o consentir a alguien más. 
+                        Creo que el gusto, la intención y el cariño se sienten en cada receta.
+                    </p>
+                </div>
+                <p>
+                    Así empezó Cacty Bakes: como un momento bonito entre mamá e hija, inspirado por recuerdos que saben a hogar. 
+                    Hoy cada pan, cada muffin y cada galleta lleva ese mismo toque: <strong>amor sencillo, compartido con quien 
+                    lo necesite ese día.</strong>
+                </p>
+            </div>
+        </section>
+
 
         <!-- PANQUÉ TRADICIONAL -->
         <section class="menu-section" id="panes">
@@ -981,45 +1176,7 @@
                 </div>
             </div>
         </section>
-        <!-- PASTEL -->
-        <section class="menu-section" id="pasteles">
-            <h2 class="section-title">🎂 Pastel (Doble con Betún)</h2>
-            <div class="menu-item-right">
-                <div class="menu-list">
-                    <h3>Sabores Disponibles</h3>
-                    <div class="menu-item">
-                        <span class="item-name">Zanahoria</span>
-                        <span class="item-price">$398.00</span>
-                    </div>
-                    <div class="menu-item">
-                        <span class="item-name">Chocolate</span>
-                        <span class="item-price">$550.00</span>
-                    </div>
-                    <div class="menu-item">
-                        <span class="item-name">Café</span>
-                        <span class="item-price">$550.00</span>
-                    </div>
-                    <div class="menu-item">
-                        <span class="item-name">Limón</span>
-                        <span class="item-price">$495.00</span>
-                    </div>
-                </div>
-                <div class="product-gallery">
-                    <div class="gallery-item">
-                        <img src="images/zanahoria-pastel.png" alt="Pastel de Zanahoria">
-                        <div class="gallery-label">Zanahoria</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/chocolate-pastel.png" alt="Pastel de Chocolate">
-                        <div class="gallery-label">Chocolate</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/limon-fresa-pastel.png" alt="Pastel de Limón con Fresa">
-                        <div class="gallery-label">Limón con Fresa</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  
         <!-- MUFFINS -->
         <section class="menu-section" id="muffins">
             <h2 class="section-title">🧁 Muffins</h2>
@@ -1221,7 +1378,47 @@
                 </div>
             </div>
         </section>
-
+        
+      <!-- PASTEL -->
+        <section class="menu-section" id="pasteles">
+            <h2 class="section-title">🎂 Pastel (Doble con Betún)</h2>
+            <div class="menu-item-right">
+                <div class="menu-list">
+                    <h3>Sabores Disponibles</h3>
+                    <div class="menu-item">
+                        <span class="item-name">Zanahoria</span>
+                        <span class="item-price">$398.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Chocolate</span>
+                        <span class="item-price">$550.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Café</span>
+                        <span class="item-price">$550.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Limón</span>
+                        <span class="item-price">$495.00</span>
+                    </div>
+                </div>
+                <div class="product-gallery">
+                    <div class="gallery-item">
+                        <img src="images/zanahoria-pastel.png" alt="Pastel de Zanahoria">
+                        <div class="gallery-label">Zanahoria</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/chocolate-pastel.png" alt="Pastel de Chocolate">
+                        <div class="gallery-label">Chocolate</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/limon-fresa-pastel.png" alt="Pastel de Limón con Fresa">
+                        <div class="gallery-label">Limón con Fresa</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- TEMPORADA NAVIDEÑA -->
         <section class="christmas-section" id="navidad">
             <div class="christmas-header">
@@ -1286,6 +1483,78 @@
 
     </div>
 
+    <!-- CÓMO HACER TU PEDIDO -->
+    <section class="order-section" id="como-pedir">
+        <h2>📱 ¿Cómo Hacer Tu Pedido?</h2>
+        <div class="order-steps">
+            <div class="order-step">
+                <div class="step-number">1</div>
+                <div class="step-title">Contáctanos</div>
+                <div class="step-description">
+                    Escríbenos por WhatsApp, Instagram, Facebook o TikTok. ¡Estamos listos para atenderte!
+                </div>
+            </div>
+            <div class="order-step">
+                <div class="step-number">2</div>
+                <div class="step-title">Elige tu Producto</div>
+                <div class="step-description">
+                    Selecciona el sabor y la presentación que más te guste de nuestro menú.
+                </div>
+            </div>
+            <div class="order-step">
+                <div class="step-number">3</div>
+                <div class="step-title">Aparta tu Pedido</div>
+                <div class="step-description">
+                    Aparta con el 50% del total. No hay reembolsos por tratarse de alimentos.
+                </div>
+            </div>
+            <div class="order-step">
+                <div class="step-number">4</div>
+                <div class="step-title">Acuerda tu Entrega</div>
+                <div class="step-description">
+                    Programamos la fecha y lugar de entrega según tu conveniencia.
+                </div>
+            </div>
+            <div class="order-step">
+                <div class="step-number">5</div>
+                <div class="step-title">Pago Final</div>
+                <div class="step-description">
+                    Completa el pago restante al momento de recibir tu pedido.
+                </div>
+            </div>
+        </div>
+
+        <div class="delivery-info">
+            <h3>📍 Información de Entregas</h3>
+            <div class="delivery-details">
+                <div class="delivery-item">
+                    <div class="delivery-icon">🗺️</div>
+                    <div class="delivery-title">Zonas de Entrega</div>
+                    <div class="delivery-text">
+                        Entregamos en Satélite y Mundo E. También puedes enviar Uber/Didi/Taxi a recoger.
+                    </div>
+                </div>
+                <div class="delivery-item">
+                    <div class="delivery-icon">⏰</div>
+                    <div class="delivery-title">Tiempos de Entrega</div>
+                    <div class="delivery-text">
+                        <strong>Pedidos pequeños</strong> (máx. 3 piezas): 2 días de anticipación.<br>
+                        <strong>Pedidos mayores:</strong> 5 días de anticipación.<br>
+                        <strong>Urgentes:</strong> Cargo extra si se liquidan antes de las 10 AM (entrega después de las 5 PM).
+                    </div>
+                </div>
+                <div class="delivery-item">
+                    <div class="delivery-icon">📦</div>
+                    <div class="delivery-title">Entregas Mismo Día</div>
+                    <div class="delivery-text">
+                        Normalmente no, pero para urgentes (si se liquidan antes de 10 AM), podemos entregar después de las 5 PM.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
     <!-- EVENTOS Y NOTICIAS -->
     <section class="events-section">
         <div class="container">
