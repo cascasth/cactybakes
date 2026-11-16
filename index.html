@@ -1285,6 +1285,42 @@
     }
 }
         }
+
+        #navidad {
+            background: #f9f3e8;
+            border: 1px solid #d7bf8c;
+            border-top: 6px solid #23483a;
+        }
+        #navidad .section-title { color: #23483a; }
+        .christmas-products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+            gap: 1.25rem;
+        }
+        .christmas-product {
+            min-width: 0;
+            padding: clamp(1rem, 3vw, 2rem);
+            background: #fffdf8;
+            color: #302820;
+            border-radius: 16px;
+            border: 1px solid #e4d4b6;
+        }
+        .christmas-product h3 { color: #70323d; margin-bottom: .65rem; }
+        .christmas-product p { margin: .65rem 0; }
+        .christmas-product img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        .christmas-product .order-mini-button {
+            display: inline-block;
+            margin-top: .75rem;
+            background: #70323d;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -1323,12 +1359,21 @@
 <div class="container">
 <section class="menu-section" id="navidad" aria-labelledby="navidad-titulo">
 <h2 class="section-title" id="navidad-titulo">Panes para regalar en Navidad</h2>
-<div class="pricing-intro">
+<div class="christmas-products">
+<article class="christmas-product">
+<img src="images/stollen-pan.png" alt="Stollen de Cacty Bakes" loading="lazy">
+<h3>Stollen navideño</h3>
+<p>Pan navideño con frutas y especias que hacemos en familia como parte de nuestra tradición de Navidad.</p>
+<p>Consulta precio y disponibilidad para la fecha en que lo necesitas.</p>
+<a class="order-mini-button" href="https://wa.link/gwykya" target="_blank" rel="noopener noreferrer">Consultar por el stollen</a>
+</article>
+<article class="christmas-product">
 <h3>Bolsa de 6 minimuffins surtidos</h3>
 <p>Dos de plátano, dos de chocolate y dos de manzana con canela.</p>
 <p><strong>$50 MXN</strong> por bolsa · <strong>$55 MXN</strong> con moño de celoseda.</p>
 <p>Escríbenos por WhatsApp con la cantidad de bolsas, si las quieres con moño y la fecha para la que las necesitas.</p>
 <a class="order-mini-button" href="https://wa.link/gwykya" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+</article>
 </div>
 </section>
 <!-- WELCOME SECTION -->
